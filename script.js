@@ -52,3 +52,15 @@ if (form && feedback) {
     form.reset();
   });
 }
+
+// Botão flutuante Voltar ao Topo
+const floatTopBtn = document.getElementById('back-to-top-float');
+
+if (floatTopBtn) {
+  const toggleFloatTopBtn = () => {
+    floatTopBtn.classList.toggle('is-visible', window.scrollY > 350);
+  };
+
+  window.addEventListener('scroll', toggleFloatTopBtn, { passive: true });
+  toggleFloatTopBtn();
+}

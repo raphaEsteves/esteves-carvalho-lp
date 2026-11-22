@@ -552,6 +552,48 @@ a {
   }
 }
 
+/* Botão flutuante Voltar ao Topo */
+.back-to-top-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 90;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.65rem 0.95rem;
+  border-radius: 999px;
+  background-color: var(--navy-dark);
+  color: #ffffff;
+  border: 1px solid rgba(196, 154, 69, 0.55);
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: 0 8px 20px rgba(9, 21, 36, 0.25);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease, background-color 0.2s ease;
+}
+
+.back-to-top-float.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top-float:hover {
+  background-color: var(--gold);
+  color: var(--navy-dark);
+}
+
+@media (max-width: 680px) {
+  .back-to-top-float {
+    right: 14px;
+    bottom: 14px;
+    padding: 0.6rem 0.85rem;
+    font-size: 0.82rem;
+  }
+}
 @media (max-width: 680px) {
   .nav-toggle {
     display: flex;
@@ -586,5 +628,48 @@ a {
 
   .section {
     padding: 3.25rem 0;
+  }
+}
+
+/* Botão flutuante Voltar ao Topo */
+.back-to-top-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 90;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.65rem 0.95rem;
+  border-radius: 999px;
+  background-color: var(--navy-dark);
+  color: #ffffff;
+  border: 1px solid rgba(196, 154, 69, 0.55);
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: 0 8px 20px rgba(9, 21, 36, 0.25);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease, background-color 0.2s ease;
+}
+
+.back-to-top-float.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top-float:hover {
+  background-color: var(--gold);
+  color: var(--navy-dark);
+}
+
+@media (max-width: 680px) {
+  .back-to-top-float {
+    right: 14px;
+    bottom: 14px;
+    padding: 0.6rem 0.85rem;
+    font-size: 0.82rem;
   }
 }
